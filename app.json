@@ -15,18 +15,61 @@
     "ios": {
       "supportsTablet": true,
       "requireFullScreen": true,
-      "bundleIdentifier": "com.w3itexperts.glucacore"
+      "bundleIdentifier": "com.w3itexperts.glucacore",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to set your profile picture",
+        "NSCameraUsageDescription": "This app needs access to your camera to take profile photos"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.w3itexperts.glucacore"
+      "package": "com.w3itexperts.glucacore",
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "buildType": "apk",
+      "softwareKeyboardLayoutMode": "pan",
+      "allowBackup": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "DEFAULT"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to set your profile picture",
+          "cameraPermission": "The app needs access to your camera to take profile photos"
+        }
+      ],
+      [
+        "expo-dev-client",
+        {
+          "silentLaunch": false
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "2b30e12f-654b-493a-94ad-065a34548e9a"

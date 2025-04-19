@@ -25,7 +25,11 @@
         "image": "latest",
         "buildType": "apk",
         "gradleCommand": ":app:assembleRelease",
-        "withoutCredentials": true
+        "withoutCredentials": true,
+        "autoIncrement": false,
+        "env": {
+          "GRADLE_OPTS": "-Dorg.gradle.project.android.disableAutomaticComponentCreation=true"
+        }
       },
       "ios": {
         "image": "latest"
@@ -34,6 +38,7 @@
   },
   "cli": {
     "version": ">= 0.34.0",
-    "requireCommit": true
+    "requireCommit": true,
+    "appVersionSource": "remote"
   }
 }

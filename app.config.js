@@ -42,7 +42,10 @@ module.exports = {
       googleMaps: {
         apiKey: "YOUR_GOOGLE_MAPS_API_KEY"
       }
-    }
+    },
+    buildType: "apk",
+    softwareKeyboardLayoutMode: "pan",
+    allowBackup: true
   },
   web: {
     favicon: "./assets/favicon.png"
@@ -67,6 +70,12 @@ module.exports = {
       {
         photosPermission: "The app needs access to your photos to set your profile picture",
         cameraPermission: "The app needs access to your camera to take profile photos"
+      }
+    ],
+    [
+      "expo-dev-client",
+      {
+        silentLaunch: false
       }
     ]
   ],
