@@ -4,6 +4,10 @@ __generated__
 web-build
 bare-apps
 
+# Native folders for CNG/Prebuild
+/android/
+/ios/
+
 # macOS
 .DS_Store
 

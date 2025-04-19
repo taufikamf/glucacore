@@ -13,6 +13,17 @@
     "preview3": {
       "developmentClient": true
     },
-    "production": {}
+    "preview4": {
+      "distribution": "internal"
+    },
+    "production": {
+      "android": {
+        "image": "latest",
+        "buildType": "apk"
+      },
+      "ios": {
+        "image": "latest"
+      }
+    }
   }
 }
