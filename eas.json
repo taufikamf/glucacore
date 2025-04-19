@@ -28,7 +28,7 @@
         "withoutCredentials": true,
         "autoIncrement": false,
         "env": {
-          "GRADLE_OPTS": "-Dorg.gradle.project.android.disableAutomaticComponentCreation=true"
+          "JAVA_HOME": "/usr/lib/jvm/java-17-openjdk-amd64"
         }
       },
       "ios": {
