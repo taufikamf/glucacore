@@ -16,3 +16,9 @@ applyNativeModulesSettingsGradle(settings)
 
 include ':app'
 includeBuild(new File(["node", "--print", "require.resolve('@react-native/gradle-plugin/package.json', { paths: [require.resolve('react-native/package.json')] })"].execute(null, rootDir).text.trim()).getParentFile())
+
+include ':expo-updates-interface'
+project(':expo-updates-interface').projectDir = new File(rootProject.projectDir, '../node_modules/expo-updates-interface/android')
+
+include ':expo-dev-menu-interface'
+project(':expo-dev-menu-interface').projectDir = new File(rootProject.projectDir, '../node_modules/expo-dev-menu-interface/android')
