@@ -24,7 +24,7 @@
       "android": {
         "image": "latest",
         "buildType": "apk",
-        "gradleCommand": ":app:assembleRelease",
+        "gradleCommand": ":app:clean :app:assembleRelease",
         "withoutCredentials": true,
         "autoIncrement": false,
         "env": {
