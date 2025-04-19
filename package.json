@@ -77,7 +77,8 @@
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "ws": "^8.17.0",
-    "expo-modules-core": "~1.11.14"
+    "expo-modules-core": "~1.11.14",
+    "expo-updates": "~0.24.13"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
