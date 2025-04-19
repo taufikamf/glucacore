@@ -1,5 +1,9 @@
 {
   "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
     "preview": {
       "android": {
         "buildType": "apk"
@@ -19,11 +23,17 @@
     "production": {
       "android": {
         "image": "latest",
-        "buildType": "apk"
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease",
+        "withoutCredentials": true
       },
       "ios": {
         "image": "latest"
       }
     }
+  },
+  "cli": {
+    "version": ">= 0.34.0",
+    "requireCommit": true
   }
 }
